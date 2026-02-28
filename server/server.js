@@ -13,13 +13,16 @@ import{Server} from "socket.io";
 const app=express();
 const server=http.createServer(app);
 
+const CLIENT_URL = process.env.CLIENT_URL;
+
 // Initialize socket.io server
 export const io=new Server(server, {
     cors:{
         // origin:"https://quick-chat-app-xt4c.vercel.app",
-        origin:"https://quick-chat-app-xt4c.vercel.app",
+        origin:CLIENT_URL,
+        credentials: true,
 
-        methods:["GET","POST","PUT","DELETE"]
+       
     }
 });
 

@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
 // const backendUrl ="https://quickchat-app-1-file.onrender.com";
-const backendUrl ="http://localhost:8000";
+const backendUrl ="https://chat-app-md5y.onrender.com";
 axios.defaults.baseURL=backendUrl;
 
 export const AuthContext = createContext();
